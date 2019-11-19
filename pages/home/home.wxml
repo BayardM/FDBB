@@ -1,4 +1,9 @@
 <!--pages/home/home.wxml-->
 <text>hello world！</text>
-<view>1.知识点1</view>
+
+
+<view>git语法：
+    <view>1.添加当前版本并加标签：先 git add .  再 git commmit -m "知识点**"   再 git tag 0*_知识点**   </view>
+    <view>2.版本回退到某一版本： 先 git reset 版本号 再 git reset --hard 版本号    版本号可通过git reflog查看</view>
+</view>
 <view>bym is cool</view>

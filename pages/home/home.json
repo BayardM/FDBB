@@ -1,3 +1,11 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "b-swiper": "/components/b-swiper/b-swiper",
+    "b-tab-control": "/components/b-tab-control/b-tab-control",
+    "b-goods-item": "/components/b-goods-item/b-goods-item",
+    "b-back-top": "/components/b-back-top/b-back-top",
+    "b-recommend": "./childCpns/b-recommend/b-recommend",
+    "b-popular": "./childCpns/b-popular/b-popular"
+  },
+  "navigationBarTitleText": "风铭购物"
 }

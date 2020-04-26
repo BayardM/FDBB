@@ -1,9 +1,36 @@
 <!--pages/home/home.wxml-->
-<text>hello world！</text>
+<!-- <text>hello world！</text>
 
 
 <view>git语法：
     <view>1.添加当前版本并加标签：先 git add .  再 git commmit -m "知识点**"   再 git tag 0*_知识点**   </view>
     <view>2.版本回退到某一版本： 先 git reset 版本号 再 git reset --hard 版本号    版本号可通过git reflog查看</view>
 </view>
-<view>bym is cool</view>
+<view>bym is cool</view> -->
+
+
+<!-- 1. 展示轮播图 -->
+<b-swiper list = "{{banners}}" />  
+
+<!-- 2. 推荐数据展示 -->
+<b-recommend recommends="{{recommends}}" bind:imageload="handleImageLoad" />
+
+<!-- 3. 本周流行展示 -->
+<b-popular />
+
+<!-- 4.tab-control -->
+<b-tab-control titles="{{titles}}" 
+               bind:tabClick="handleTabClick"
+               id="tab-control"
+               class="{{isTabFixed ? 'fixed' : ''}}" />
+<b-tab-control titles="{{titles}}" wx:if="{{isTabFixed}}"  />
+<!-- 5.展示商品数据 -->
+<view class="goods"> 
+  <block wx:for="{{goods[currentType].list}}" wx:key="{{index}}">
+      <b-goods-item class="g-item" item="{{item}}" />
+  </block>
+</view>
+
+<!-- 6.回到顶部 -->
+<!-- hidden：hidden属性对于自定义组件无效 -->
+<b-back-top wx:if="{{showBacktop}}"/>

@@ -1,1 +1,18 @@
 /* pages/home/home.wxss */
+/* .goods {
+  display: flex;
+   自动换行 
+  flex-wrap: wrap;
+}
+.goods > .g-item {
+  width: 48%;
+  position: relative;
+} */
+/* wxss不能引用本地图片 */
+.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
